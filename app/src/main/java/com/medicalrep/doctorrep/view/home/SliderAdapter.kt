@@ -8,15 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import com.medicalrep.doctorrep.R
-import kotlinx.android.synthetic.main.slider_image_item.view.*
 
 class SliderAdapter:PagerAdapter{
     var context:Context
     var images:Array<Int>
     lateinit var inflater:LayoutInflater
 
-    constructor(context: Context, images: Array<Int>) : super() {
-        this.context = context
+    constructor(context: Context?, images: Array<Int>) : super() {
+        this.context = context!!
         this.images = images
     }
 

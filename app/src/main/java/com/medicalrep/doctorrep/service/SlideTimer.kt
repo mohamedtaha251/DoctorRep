@@ -1,9 +1,8 @@
 package com.medicalrep.doctorrep.service
 
 import android.app.Activity
-import android.content.Context
+import android.support.v4.app.FragmentActivity
 import android.support.v4.view.ViewPager
-import android.widget.Toast
 import java.util.*
 
 class SlideTimer : TimerTask {
@@ -15,8 +14,8 @@ class SlideTimer : TimerTask {
     val IMAGES_SIZE: Int = 3 // number of images
 
 
-    constructor(activity: Activity, viewPager: ViewPager) : super() {
-        this.activity = activity
+    constructor(activity: FragmentActivity?, viewPager: ViewPager) : super() {
+        this.activity = activity!!
         this.viewPager = viewPager
         this.currentPage = 0
 
