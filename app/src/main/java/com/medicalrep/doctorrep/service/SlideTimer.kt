@@ -9,9 +9,8 @@ class SlideTimer : TimerTask {
     var activity: Activity
     var viewPager: ViewPager
     var currentPage: Int
-    val DELAY_MS: Long = 500//delay in milliseconds before task is to be executed
+    val DELAY_MS: Long = 0//delay in milliseconds before task is to be executed
     val PERIOD_MS: Long = 3000 // time in milliseconds between successive task
-    val IMAGES_SIZE: Int = 3 // number of images
 
 
     constructor(activity: FragmentActivity?, viewPager: ViewPager) : super() {
@@ -26,7 +25,7 @@ class SlideTimer : TimerTask {
         activity.runOnUiThread(object : Runnable {
             override fun run() {
 
-                if (currentPage == IMAGES_SIZE) currentPage = 0
+                if (currentPage == viewPager.adapter!!.count) currentPage = 0
                 viewPager.setCurrentItem(currentPage++, true)
 
             }

@@ -45,6 +45,10 @@ class MainFragment : Fragment() {
         bottomNavigationView = view.findViewById(R.id.navigation)
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
+        //open home fragment as default fragment
+        fragmentManager!!.beginTransaction().replace(R.id.Home_cointainer, HomeFragment()).commit()
+
+
 
         return view
     }

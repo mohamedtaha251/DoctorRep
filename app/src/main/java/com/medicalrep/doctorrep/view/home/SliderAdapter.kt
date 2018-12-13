@@ -7,14 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.medicalrep.doctorrep.R
 
 class SliderAdapter:PagerAdapter{
     var context:Context
-    var images:Array<Int>
+    var images:ArrayList<String>
     lateinit var inflater:LayoutInflater
 
-    constructor(context: Context?, images: Array<Int>) : super() {
+    constructor(context: Context?, images: ArrayList<String>) : super() {
         this.context = context!!
         this.images = images
     }
@@ -28,7 +29,7 @@ class SliderAdapter:PagerAdapter{
         inflater=context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         var view:View=inflater.inflate(R.layout.slider_image_item,container,false)
         image=view.findViewById(R.id.slider_image)
-        image.setBackgroundResource(images[position])
+        Glide.with(context).load(images[position]).into(image)
         container!!.addView(view)
         return view
 

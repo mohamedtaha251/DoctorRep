@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "813228431324",
+    "firebase_url": "https://doctorrep-01.firebaseio.com",
+    "project_id": "doctorrep-01",
+    "storage_bucket": "doctorrep-01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813228431324:android:2fe3f50a2ee0c3df",
+        "android_client_info": {
+          "package_name": "com.medicalrep.doctorrep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813228431324-ef5ie9se861ko6jqodkobq52f75qekn0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.medicalrep.doctorrep",
+            "certificate_hash": "70e5bbd5d714c81ff04f66a9fee1221c9917e4cd"
+          }
+        },
+        {
+          "client_id": "813228431324-b2a8jrav2lq80f0sbgvdplpc6cd70d25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyS8r-82vxd6m6yEoXryNyfTepsi8wG50"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813228431324-b2a8jrav2lq80f0sbgvdplpc6cd70d25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

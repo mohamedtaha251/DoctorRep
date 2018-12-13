@@ -5,6 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="10dp"
         tools:context=".view.start.StartFragment">
 
     <android.support.design.widget.TextInputLayout
@@ -12,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
-            app:layout_constraintBottom_toTopOf="@+id/btn_add_doctor"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_area"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -23,6 +24,38 @@
                 android:layout_height="41dp"/>
     </android.support.design.widget.TextInputLayout>
 
+    <TextView
+            android:id="@+id/tx_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="10dip"
+            android:text="Area:"
+            app:layout_constraintBottom_toTopOf="@id/spinner_area"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_layout_doctor_name"
+    />
+
+
+    <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_area"
+            app:layout_constraintBottom_toTopOf="@id/btn_select_speciality"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_area"
+            />
+
+    <Button
+            android:id="@+id/btn_select_speciality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Area"
+            app:layout_constraintBottom_toTopOf="@+id/btn_add_doctor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_area"/>
 
     <Button
             android:id="@+id/btn_add_doctor"
@@ -32,7 +65,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_layout_doctor_name"/>
+            app:layout_constraintTop_toBottomOf="@+id/btn_select_speciality"/>
 
 
 </android.support.constraint.ConstraintLayout>
